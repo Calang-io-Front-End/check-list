@@ -4,7 +4,7 @@ import Button from "components/Button";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex-col items-center justify-between p-24">
+    <main className="max-h-screen flex-col items-center justify-between p-24">
       <div className="relative flex flex-col place-items-center">
         <Image
           className="relative rounded-full"
