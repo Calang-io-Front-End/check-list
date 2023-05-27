@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import Button from "components/Button";
+import Card from "components/Card";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           Calang.io CheckList
         </h1>
         <Button name={"World"} className={"text-xl font-semibold"} />
+        <Card title="Carrinho de compras" />
       </div>
     </main>
   );
