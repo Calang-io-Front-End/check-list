@@ -19,7 +19,7 @@ git clone <linkDoRepositorio>
 - crie uma branch
 
 ```bash
-git checkout -b <nomeDaBranch>
+git checkout -b feature/nome-da-ação
 ```
 
 Instale as dependências:
