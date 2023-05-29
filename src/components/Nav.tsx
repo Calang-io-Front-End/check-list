@@ -1,9 +1,11 @@
-import { FC } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 
-interface NavProps {}
-
-const Nav: FC<NavProps> = ({}) => {
-  return <div>Nav</div>;
+const Nav = () => {
+  return (
+    <nav>
+      <GiHamburgerMenu className="w-12 h-12 text-black" />
+    </nav>
+  );
 };
 
 export default Nav;
