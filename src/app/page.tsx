@@ -1,23 +1,20 @@
-import Image from "next/image";
-
-import Button from "components/Button";
+import AddTask from "components/AddTask";
+import Card from "components/Card";
+import Item from "components/Item";
 
 export default function Home() {
   return (
-    <main className="min-h-[80vh] flex-col items-center justify-between p-24">
-      <div className="relative flex flex-col place-items-center">
-        <Image
-          className="relative rounded-full"
-          src="/assets/images/calang-io.jpg"
-          alt="Calangio Logo"
-          width={300}
-          height={250}
-          priority
-        />
-        <h1 className="left-0 top-0 flex w-full justify-center text-5xl font-bold">
-          Calang.io CheckList
-        </h1>
-        <Button name={"World"} className={"text-xl font-semibold"} />
+    <main className="container min-h-[70vh] flex-col items-end justify-center p-24">
+      <AddTask />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <Card title="Tarefa 1">
+          <Item id="001" title="Subtarefa-001">
+            Subtarefa-001
+          </Item>
+          <Item id="001" title="Subtarefa-001">
+            Subtarefa-001
+          </Item>
+        </Card>
       </div>
     </main>
   );
