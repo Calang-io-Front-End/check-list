@@ -1,10 +1,14 @@
-"use client";
-
 import { useState } from "react";
 import { BsFillPlusSquareFill } from "react-icons/bs";
 import { FaTrash, FaPlus } from "react-icons/fa";
+import { ITask } from "../interfaces/ITask";
+import { FC } from "react";
 
-export default function AddTask() {
+interface AddTaskProps {
+  handleAddTask: (newTask: ITask) => void;
+}
+
+export const AddTask: FC<AddTaskProps> = ({ handleAddTask }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -19,9 +23,9 @@ export default function AddTask() {
     setDescription("");
   };
 
-  const handleAddTask = () => {
-    // Aqui você pode adicionar a lógica para adicionar a tarefa
-    console.log("Adicionar tarefa:", title, description);
+  const handleAddTaskClick = () => {
+    const newTask: ITask = { title: title, description: description };
+    handleAddTask(newTask);
     handleModalClose();
   };
 
@@ -32,7 +36,7 @@ export default function AddTask() {
         onClick={handleModalOpen}
       >
         <BsFillPlusSquareFill className="w-12 h-12 text-[#5BC400]" />
-        <h2 className="text-4xl font-semibold text-[#5BC400]">
+        <h2 className="text-2xl font-semibold text-[#5BC400]">
           Adicionar uma nova tarefa
         </h2>
       </div>
@@ -58,7 +62,7 @@ export default function AddTask() {
             ></textarea>
             <div className="flex justify-end">
               <FaPlus
-                onClick={handleAddTask}
+                onClick={handleAddTaskClick}
                 className="w-8 h-8 rounded mr-3 text-[#5BC400] hover:cursor-pointer"
               />
               <FaTrash
