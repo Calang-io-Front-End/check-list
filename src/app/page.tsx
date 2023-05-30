@@ -1,8 +1,4 @@
-"use client"
-import AddTask from "components/AddTask";
-import Card from "components/Card";
-import Item from "components/Item";
-import TaskList from "../components/TaskList";
+"use client";
 import TaskContainer from "../components/TaskContainer";
 
 export default function Home() {

@@ -75,4 +75,4 @@ export const AddTask: FC<AddTaskProps> = ({ handleAddTask }) => {
       )}
     </div>
   );
-}
+};
